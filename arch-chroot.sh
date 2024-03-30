@@ -2,8 +2,10 @@
 
 mkdir /mnt
 mount -o subvol=@ /dev/nvme0n1p5 /mnt
+rm -rf /mnt/*
 mkdir /mnt/home
 mount -o subvol=@home /dev/nvme0n1p5 /mnt/home
+rm -rf /mnt/home/*
 mkdir /mnt/mnt
 mkdir /mnt/mnt/defvol
 mount -o subvol=/ /dev/nvme0n1p5 /mnt/defvol
@@ -20,6 +22,6 @@ swapon /dev/nvme0n1p6
 
 pacstrap -K /mnt amd-ucode base base-devel btrfs-progs git linux linux-firmware nano sudo
 
-cp -R root /mnt
+cp -R . /mnt
 
 arch-chroot /mnt
