@@ -33,3 +33,5 @@ rm -rf yay
 yay -S linux-headers nvidia-dkms qt5-wayland qt5ct libva libva-nvidia-driver-git
 
 git clone https://github.com/BosscasDavK/HyprV4.git
+
+echo "Done Reboot"
