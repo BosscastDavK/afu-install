@@ -10,7 +10,7 @@ rm -rf /mnt/home/*
 
 mkdir /mnt/mnt
 mkdir /mnt/mnt/defvol
-mount -o subvol=/ /dev/nvme0n1p5 /mnt/defvol
+mount -o subvol=/ /dev/nvme0n1p5 /mnt/mnt/defvol
 
 mkdir /mnt/boot
 mkdir /mnt/boot/efi
@@ -27,8 +27,9 @@ mount /dev/nvme1n1p2 /mnt/software
 
 swapon /dev/nvme0n1p6
 
-pacstrap -K /mnt amd-ucode base base-devel bash-completion btrfs-progs git linux linux-firmware nano tfs-3g sudo
+pacstrap -K /mnt amd-ucode base base-devel bash-completion btrfs-progs git linux linux-firmware nano ntfs-3g sudo
 
+mkdir /mnt/root
 cp -R . /mnt/root
 
 genfstab -U /mnt >> /mnt/etc/fstab
