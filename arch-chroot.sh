@@ -27,7 +27,7 @@ mount /dev/nvme1n1p2 /mnt/software
 
 swapon /dev/nvme0n1p6
 
-pacstrap -K /mnt amd-ucode base base-devel bash-completion btrfs-progs git linux linux-firmware nano ntfs-3g sudo openssh
+pacstrap -K /mnt amd-ucode base base-devel bash-completion btrfs-progs git linux linux-firmware nano ntfs-3g sudo openssh gparted
 
 cp -R . /mnt/root
 
