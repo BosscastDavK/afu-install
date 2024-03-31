@@ -1,0 +1,8 @@
+[Disktop Entry]
+
+[Desktop Entry]
+Type=Application
+GenericName=Cursor
+Comment=The AI-first Code Editor
+Exec=/home/davk/cursor.AppImage
+Icon=preferences-desktop-cursors
