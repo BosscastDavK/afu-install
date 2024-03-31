@@ -23,15 +23,12 @@ systemctl enable dhcpcd@enp6s0
 pacman -S networkmanager
 systemctl enable NetworkManager
 
-sudo su davk
 cd ~
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd ..
-rm -rf yay
-yay -S linux-headers nvidia-dkms qt5-wayland qt5ct libva libva-nvidia-driver-git
+git clone https://aur.archlinux.org/yay.git /home/davk/yay
+git clone https://github.com/BosscasDavK/HyprV4.git /home/davk/HyprV4
+chown -R davk:users /home/davk/yay
+chown -R davk:users /home/davk/HyprV4
 
-git clone https://github.com/BosscasDavK/HyprV4.git
+sudo su davk
 
 echo "Done Reboot"
