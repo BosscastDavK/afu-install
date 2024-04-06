@@ -1,8 +1,7 @@
 #!/bin/bash
 systemctl enable --now sshd
-cd ~
-cp -R ./etc /
-cp -R ./usr /
+cd /temp
+cp -R /temp/etc /
 
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 hwclock --systohc
@@ -31,12 +30,11 @@ passwd davk
 
 echo '%wheel ALL=(ALL:ALL) ALL' | EDITOR='tee -a' visudo
 echo 'Defaults rootpw' | EDITOR='tee -a' visudo
-EDITOR=nano visudo
+#EDITOR=nano visudo
 
-wget -P /opt/appimages/ -O cursor.AppImage https://download.cursor.sh/linux/appImage/x64
+chown -R davk:users /temp
+sudo su davk -c "/temp/user.sh"
 
-./user.sh
-
-echo "Done Exiting"
+echo "Done Exiting Chroot"
 sleep 10
 exit
