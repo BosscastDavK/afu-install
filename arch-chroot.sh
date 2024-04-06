@@ -20,15 +20,15 @@ mount /dev/nvme0n1p2 /mnt/boot/efi
 echo "EFI Mounted"
 
 mkdir /mnt/games
-mount /dev/sda2 /mnt/games
+mount /dev/sda2 /mnt/mnt/games
 echo "Games Mounted"
 
 mkdir /mnt/storagedrive
-mount /dev/sdb2 /mnt/storagedrive
+mount /dev/sdb2 /mnt/mnt/storagedrive
 echo "Storage Drive Mounted"
 
 mkdir /mnt/software
-mount /dev/nvme1n1p2 /mnt/software
+mount /dev/nvme1n1p2 /mnt/mnt/software
 echo "Software Mounted"
 
 swapon /dev/nvme0n1p6
