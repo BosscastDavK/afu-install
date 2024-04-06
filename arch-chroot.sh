@@ -26,13 +26,13 @@ mount /dev/nvme1n1p2 /mnt/software
 
 swapon /dev/nvme0n1p6
 
-pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel bash-completion btrfs-progs git wget nano ntfs-3g sudo pacman-contrib
+pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel bash-completion btrfs-progs git wget nano ntfs-3g sudo openssh pacman-contrib
 
 cp -R . /mnt/root
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
-arch-chroot /mnt
+arch-chroot /mnt /root.sh
 
 umount -R /mnt
 
