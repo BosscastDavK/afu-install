@@ -17,6 +17,7 @@ systemctl enable dhcpcd@enp6s0
 pacman -S networkmanager
 systemctl enable NetworkManager
 
+pacman -S linux-headers nvidia-dkms
 mkinitcpio -P
 
 pacman -S grub efibootmgr
