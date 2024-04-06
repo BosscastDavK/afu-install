@@ -1,5 +1,5 @@
 #!/bin/bash
-systemctl enable --now sshd
+systemctl enable sshd
 cd /temp
 cp -R /temp/etc /
 
