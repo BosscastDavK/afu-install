@@ -12,15 +12,15 @@ echo LANG=en_US.UTF-8 > /etc/locale.conf
 echo KEYMAP=us > /etc/vconsole.conf
 echo AFU > /etc/hostname
 
-pacman -Sy dhcpcd
+pacman -Sy --noconfirm dhcpcd
 systemctl enable dhcpcd@enp6s0
-pacman -S networkmanager
+pacman -S --noconfirm networkmanager
 systemctl enable NetworkManager
 
-pacman -S linux-headers nvidia-dkms
+pacman -S --noconfirm linux-headers nvidia-dkms
 mkinitcpio -P
 
-pacman -S grub efibootmgr
+pacman -S --noconfirm grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 cp /temp/etc/default/grub /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
