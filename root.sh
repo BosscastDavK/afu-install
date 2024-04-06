@@ -25,8 +25,10 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 cp /temp/etc/default/grub /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
+echo "root password"
 passwd
 useradd -m -g users -G wheel,storage,games,power,lp -s /bin/bash davk
+echo "user password"
 passwd davk
 
 echo '%wheel ALL=(ALL:ALL) ALL' | EDITOR='tee -a' visudo
