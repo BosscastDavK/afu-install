@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Cursor
-Comment=The AI-first Code Editor
-Exec=/opt/appimages/cursor.AppImage
-Icon=preferences-desktop-cursors
