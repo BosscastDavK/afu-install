@@ -34,7 +34,7 @@ echo "Software Mounted"
 swapon /dev/nvme0n1p6
 echo "SWAPON"
 
-pacstrap -K /mnt base linux linux-firmware amd-ucode base-devel bash-completion btrfs-progs git wget nano ntfs-3g sudo openssh pacman-contrib
+pacstrap -K /mnt base linux linux-firmware linux-headers nvidia-dkms amd-ucode base-devel bash-completion btrfs-progs git wget nano ntfs-3g sudo openssh pacman-contrib
 
 echo "Copying files to /temp"
 cp -R . /mnt/temp
