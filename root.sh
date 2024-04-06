@@ -1,4 +1,6 @@
 #!/bin/bash
+systemctl enable --now sshd
+cd ~
 cp -R ./etc /
 cp -R ./usr /
 
@@ -32,6 +34,8 @@ echo 'Defaults rootpw' | EDITOR='tee -a' visudo
 EDITOR=nano visudo
 
 wget -P /opt/appimages/ -O cursor.AppImage https://download.cursor.sh/linux/appImage/x64
+
+./user.sh
 
 echo "Done Exiting"
 sleep 10
