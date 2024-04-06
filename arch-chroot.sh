@@ -12,7 +12,7 @@ echo "/home Mounted and Reset"
 mkdir /mnt/mnt
 mkdir /mnt/mnt/defvol
 mount -o subvol=/ /dev/nvme0n1p5 /mnt/mnt/defvol
-echo "defvol Mounted
+echo "defvol Mounted"
 
 mkdir /mnt/boot
 mkdir /mnt/boot/efi
@@ -21,7 +21,7 @@ echo "EFI Mounted"
 
 mkdir /mnt/games
 mount /dev/sda2 /mnt/games
-echo "Games Mounted
+echo "Games Mounted"
 
 mkdir /mnt/storagedrive
 mount /dev/sdb2 /mnt/storagedrive
