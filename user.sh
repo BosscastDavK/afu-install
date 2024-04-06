@@ -8,6 +8,6 @@ git clone https://github.com/Jguer/yay.git
 cd yay
 makepkg -si
 
-echo "Done Logging Out"
+echo "Done Logging DavK Out"
 sleep 10
 exit
