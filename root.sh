@@ -17,10 +17,10 @@ systemctl enable dhcpcd@enp6s0
 pacman -S --noconfirm networkmanager
 systemctl enable NetworkManager
 
-pacman -S --noconfirm linux-headers nvidia-dkms
+pacman -Sy --noconfirm linux-headers nvidia-dkms
 mkinitcpio -P
 
-pacman -S --noconfirm grub efibootmgr
+pacman -Sy --noconfirm grub efibootmgr
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 cp /temp/etc/default/grub /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
